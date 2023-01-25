@@ -95,10 +95,10 @@ description = "Footer partial"
         </div>
     </div>
     <div class="tm-copyright">
-        <img data-src="/site/templates/assets/images/artparkett-lilie.svg" width="50" alt="Art Parkett Stelzl - Parkett- und Bodenleger aus München" uk-img>
+        <img data-src="{{ 'assets/images/artparkett-lilie.svg'|theme }}" width="50" alt="Art Parkett Stelzl - Parkett- und Bodenleger aus München" uk-img>
         <h5>Art Parkett Stelzl</h5>
         <p class="uk-text-small">
-            &copy; 2023 - Art Parkett Stelzl. Alle Rechte vorbehalten. Design by <a href="https://mate-themes.com">MateThemes</a>.
+            &copy; {{ 'now' | date('Y') }} - Art Parkett Stelzl. Alle Rechte vorbehalten. Design by <a href="https://mate-themes.com">MateThemes</a>.
         </p>
     </div>
 </footer>
