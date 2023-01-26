@@ -9,23 +9,26 @@ description = "Header Partial"
                 </a>
             </div>
             <div class="uk-navbar-center">
-                <a href='/' class='uk-navbar-item uk-logo'><img src='/site/assets/files/1016/artparkett-logo.svg' alt='Parkett Stelzl' width='180' uk-img></a>
+                <a href='/' class="uk-navbar-item uk-logo">
+                    <img src="{{ 'assets/images/artparkett-logo.svg'|theme }}" alt="Parkett Stelzl" width="180">
+                </a>
             </div>
             <div class="uk-navbar-right">
                 <ul class="uk-navbar-nav">
                     <li>
-    <a data-uk-icon="icon: world"></a>
-    <div data-uk-dropdown="mode: click">
-        <ul class="uk-nav uk-dropdown-nav">
-                    <li class='uk-active'>
-                    <a class='lang-item Deutsch' hreflang='de' href='/'>Deutsch</a>
-                </li>
-        <li class='no-current'>
-                    <a class='lang-item Englisch' hreflang='en' href='/en/'>Englisch</a>
-                </li>
-        </ul>
-    </div>
-</li>                </ul>
+                        <a data-uk-icon="icon: world"></a>
+                        <div data-uk-dropdown="mode: click">
+                            <ul class="uk-nav uk-dropdown-nav">
+                                <li class="uk-active">
+                                    <a class='lang-item Deutsch' hreflang='de' href='/'>Deutsch</a>
+                                </li>
+                                <li class='no-current'>
+                                    <a class='lang-item Englisch' hreflang='en' href='/en/'>Englisch</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </nav>
     </div>
@@ -63,7 +66,7 @@ description = "Header Partial"
 <div class="tm-header uk-visible@m" data-uk-header>
     <div class="tm-headerbar-default tm-headerbar tm-headerbar-top">
         <div class="uk-container uk-container-large uk-flex uk-flex-middle">
-            <a href='/' class='uk-logo'><img src='/site/assets/files/1016/artparkett-logo.svg' alt='Parkett Stelzl' width='220' data-uk-img></a>
+            <a href='/' class='uk-logo'><img src="{{ 'assets/images/artparkett-logo.svg'|theme }}" alt='Parkett Stelzl' width='220' data-uk-img></a>
             <div class="uk-margin-auto-left">
                 <div class="uk-grid-medium uk-child-width-auto uk-flex-middle" data-uk-grid>
                     <div>

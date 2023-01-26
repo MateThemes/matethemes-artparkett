@@ -3,9 +3,6 @@ description = "Meta Partials"
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Title | Parkett Stelzl</title>
+<title>{% if this.page.meta_title %}{{ this.page.meta_title }}{% else %}{{ this.page.title }}{% endif %} | Parkett Stelzl</title>
 
 <link rel="stylesheet" href="{{ 'assets/dist/css/styles.css'|theme }}" />
-
-<script src="js/uikit.min.js"></script>
-<script src="js/uikit-icons.min.js"></script>
