@@ -1,5 +1,6 @@
 description = "Header Partial"
 ==
+{# header for small screens #}
 <div class="tm-header-mobile uk-hidden@m">
     <div data-uk-sticky show-on-up animation="uk-animation-slide-top" cls-active="uk-navbar-sticky" sel-target=".uk-navbar-container">
         <nav class="uk-navbar-container uk-container" data-uk-navbar="mode: click">
@@ -9,7 +10,7 @@ description = "Header Partial"
                 </a>
             </div>
             <div class="uk-navbar-center">
-                <a href='/' class="uk-navbar-item uk-logo">
+                <a href="{{ '/'|app }}" class="uk-navbar-item uk-logo">
                     <img src="{{ 'assets/images/artparkett-logo.svg'|theme }}" alt="Parkett Stelzl" width="180">
                 </a>
             </div>
@@ -34,7 +35,7 @@ description = "Header Partial"
     </div>
     <div id="tmoffcanvas" data-uk-offcanvas="mode: push; overlay: true">
         <div class="uk-offcanvas-bar">
-            <button class="uk-offcanvas-close" type="button" uk-close></button>
+            <button class="uk-offcanvas-close" type="button" data-uk-close></button>
             <div class="uk-child-width-1-1" uk-grid>
                 <div>
                     <div class="uk-panel">
@@ -42,31 +43,49 @@ description = "Header Partial"
                             <button type='submit' class='uk-search-toggle' uk-search-icon></button>
                             <input type='search' id='mobile-search-query' name='q' class='uk-search-input' placeholder='Seite durchsuchen...' style="border-radius: 20px;">
                         </form>
-
-                        <ul class='uk-nav uk-nav-default uk-nav-parent-icon' uk-nav>
-<li class="uk-active"><a href="/">Home</a></li>
-<li class=" uk-parent"><a href="#">Service</a>
-<ul class='uk-nav-sub'>
-<li class=""><a href="/fussboden-verlegen-vom-fachmann/">Fussboden verlegen vom Fachmann</a></li>
-<li class=""><a href="/parkett-schleifen-und-renovieren/">Parkett schleifen und renovieren</a></li>
-<li class=""><a href="/treppenrenovierung/">Treppenrenovierung</a></li>
-</ul>
-</li>
-<li class=""><a href="/wir-ueber-uns/">Wir über uns</a></li>
-<li class=""><a href="/unsere-austellung-in-munchen-forstenried/">Austellung</a></li>
-<li class=""><a href="/galerie/">Galerie</a></li>
-<li class=""><a href="/kontaktieren-sie-uns/">Kontakt</a></li>
-</ul>
+                        <ul class="uk-nav uk-nav-default uk-nav-parent-icon" data-uk-nav>
+                            <li class="uk-active">
+                                <a href="/">Home</a>
+                            </li>
+                            <li class="uk-parent"><a href="#">Service</a>
+                                <ul class="uk-nav-sub">
+                                    <li>
+                                        <a href="/fussboden-verlegen-vom-fachmann/">Fussboden verlegen vom Fachmann</a>
+                                    </li>
+                                    <li>
+                                        <a href="/parkett-schleifen-und-renovieren/">Parkett schleifen und renovieren</a>
+                                    </li>
+                                    <li>
+                                        <a href="/treppenrenovierung/">Treppenrenovierung</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/wir-ueber-uns/">Wir über uns</a>
+                            </li>
+                            <li>
+                                <a href="/unsere-austellung-in-munchen-forstenried/">Austellung</a>
+                            </li>
+                            <li>
+                                <a href="/galerie/">Galerie</a>
+                            </li>
+                            <li>
+                                <a href="/kontaktieren-sie-uns/">Kontakt</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>    <!-- header for large screens -->
+</div>
+{# header for large screens #}
 <div class="tm-header uk-visible@m" data-uk-header>
     <div class="tm-headerbar-default tm-headerbar tm-headerbar-top">
         <div class="uk-container uk-container-large uk-flex uk-flex-middle">
-            <a href='/' class='uk-logo'><img src="{{ 'assets/images/artparkett-logo.svg'|theme }}" alt='Parkett Stelzl' width='220' data-uk-img></a>
+        <a href="{{ '/'|app }}" class="uk-logo">
+                <img src="{{ 'assets/images/artparkett-logo.svg'|theme }}" alt="Parkett Stelzl" width="220" height="auto" data-uk-img>
+            </a>
             <div class="uk-margin-auto-left">
                 <div class="uk-grid-medium uk-child-width-auto uk-flex-middle" data-uk-grid>
                     <div>
@@ -106,18 +125,19 @@ description = "Header Partial"
                                     </div>
                                 </li>
                                 <li>
-    <a data-uk-icon="icon: world"></a>
-    <div data-uk-dropdown="mode: click">
-        <ul class="uk-nav uk-dropdown-nav">
-                    <li class='uk-active'>
-                    <a class='lang-item Deutsch' hreflang='de' href='/'>Deutsch</a>
-                </li>
-        <li class='no-current'>
-                    <a class='lang-item Englisch' hreflang='en' href='/en/'>Englisch</a>
-                </li>
-        </ul>
-    </div>
-</li>							</ul>
+                                    <a data-uk-icon="icon: world"></a>
+                                    <div data-uk-dropdown="mode: click">
+                                        <ul class="uk-nav uk-dropdown-nav">
+                                            <li class='uk-active'>
+                                                <a class='lang-item Deutsch' hreflang='de' href='/'>Deutsch</a>
+                                            </li>
+                                            <li class='no-current'>
+                                                <a class='lang-item Englisch' hreflang='en' href='/en/'>Englisch</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -127,13 +147,13 @@ description = "Header Partial"
     <div data-uk-sticky="media: @m; cls-active: uk-navbar-sticky; sel-target: .uk-navbar-container;">
         <div class="uk-navbar-container">
             <div class="uk-container uk-container-large uk-flex uk-flex-middle">
-                <nav class="uk-navbar uk-flex-auto" data-uk-navbar="align: left; boundary: .tm-header . uk-navbar-container; container: .tm-header > [uk-sticky]; mode: click;">
+                <nav class="uk-navbar uk-flex-auto" data-uk-navbar="align: left; boundary: .tm-header . uk-navbar-container; container: .tm-header > [uk-sticky]; mode: click; dropbar:true;">
                     <div class="uk-navbar-left uk-flex-auto">
                         <ul class="uk-navbar-nav">
-                            <div class='uk-navbar-center uk-visible@m'>
-<ul class='uk-navbar-nav'>
+
+
     <li class="uk-active"><a href='/'>Home</a></li>
-    <li><a href='#'>Service</a>
+    <li><a href='#'>Service <span data-uk-navbar-parent-icon></span></a>
     <div class='uk-navbar-dropdown'>
         <ul class='uk-nav uk-navbar-dropdown-nav'>
     <li><a href='/fussboden-verlegen-vom-fachmann/'>Fussboden verlegen vom Fachmann</a></li>
@@ -145,8 +165,7 @@ description = "Header Partial"
     <li><a href='/wir-ueber-uns/'>Wir über uns</a></li>
     <li><a href='/unsere-austellung-in-munchen-forstenried/'>Ausstellung</a></li>
     <li><a href='/galerie/'>Galerie</a></li>
-    <li><a href='/kontaktieren-sie-uns/'>Kontakt</a></li>
-</ul></div>						</ul>
+    <li><a href='/kontaktieren-sie-uns/'>Kontakt</a></li>					</ul>
                         <div class="uk-margin-auto-left uk-navbar-item">
                             <div class="uk-margin-remove-last-child custom">
                                 <a href="/kontaktieren-sie-uns/" class="uk-button uk-button-primary">Anfrage stellen</a>
