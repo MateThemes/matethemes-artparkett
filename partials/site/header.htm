@@ -150,25 +150,41 @@ description = "Header Partial"
                 <nav class="uk-navbar uk-flex-auto" data-uk-navbar="align: left; boundary: .tm-header . uk-navbar-container; container: .tm-header > [uk-sticky]; mode: click; dropbar:true;">
                     <div class="uk-navbar-left uk-flex-auto">
                         <ul class="uk-navbar-nav">
-
-
-    <li class="uk-active"><a href='/'>Home</a></li>
-    <li><a href='#'>Service <span data-uk-navbar-parent-icon></span></a>
-    <div class='uk-navbar-dropdown'>
-        <ul class='uk-nav uk-navbar-dropdown-nav'>
-    <li><a href='/fussboden-verlegen-vom-fachmann/'>Fussboden verlegen vom Fachmann</a></li>
-    <li><a href='/parkett-schleifen-und-renovieren/'>Parkett schleifen und renovieren</a></li>
-    <li><a href='/treppenrenovierung/'>Treppenrenovierung</a></li>
-</ul>
-    </div>
-</li>
-    <li><a href='/wir-ueber-uns/'>Wir über uns</a></li>
-    <li><a href='/unsere-austellung-in-munchen-forstenried/'>Ausstellung</a></li>
-    <li><a href='/galerie/'>Galerie</a></li>
-    <li><a href='/kontaktieren-sie-uns/'>Kontakt</a></li>					</ul>
+                            <li {% if this.page.id == 'home' %}class="uk-active"{% endif %}>
+                                <a href="{{ '/'|app }}">Home</a>
+                            </li>
+                            <li>
+                                <a href='#'>Service <span data-uk-navbar-parent-icon></span></a>
+                                <div class='uk-navbar-dropdown'>
+                                    <ul class='uk-nav uk-navbar-dropdown-nav'>
+                                        <li>
+                                            <a href='/fussboden-verlegen-vom-fachmann/'>Fussboden verlegen vom Fachmann</a>
+                                        </li>
+                                        <li>
+                                            <a href='/parkett-schleifen-und-renovieren/'>Parkett schleifen und renovieren</a>
+                                        </li>
+                                        <li>
+                                            <a href='/treppenrenovierung/'>Treppenrenovierung</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href='/wir-ueber-uns/'>Wir über uns</a>
+                            </li>
+                            <li>
+                                <a href='/unsere-austellung-in-munchen-forstenried/'>Ausstellung</a>
+                            </li>
+                            <li>
+                                <a href='/galerie/'>Galerie</a>
+                            </li>
+                            <li {% if this.page.id == 'kontaktieren-sie-uns' %}class="uk-active"{% endif %}>
+                                <a href="{{ 'kontaktieren-sie-uns'|app }}">Kontakt</a>
+                            </li>
+                        </ul>
                         <div class="uk-margin-auto-left uk-navbar-item">
                             <div class="uk-margin-remove-last-child custom">
-                                <a href="/kontaktieren-sie-uns/" class="uk-button uk-button-primary">Anfrage stellen</a>
+                                <a href="{{ 'kontaktieren-sie-uns'|app }}" class="uk-button uk-button-primary">Beratung anfragen</a>
                             </div>
                         </div>
                     </div>

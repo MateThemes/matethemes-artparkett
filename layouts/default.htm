@@ -4,29 +4,24 @@ description = "Default layout"
 <!DOCTYPE html>
 <html lang="de-DE">
 <head>
-    {% partial 'site/meta' %}
+    {% partial "site/head" %}
 </head>
-<body class="{{ 'page-'~this.page.id }}">
+<body>
+{# Page loading spinner #}
+<div class="page-loading active">
+    <div class="page-loading-inner">
+        <div class="page-spinner"></div>
+        <span>Lade ...</span>
+    </div>
+</div>
+{# header partial #}
+{% partial "site/header" %}
+{% page %}
 
-<!-- Header -->
-<header id="layout-header">
-    {% partial 'site/header' %}
-</header>
+{# footer partial #}
+{% partial "site/footer" %}
 
-<!-- Content -->
-<section id="layout-content">
-    {% page %}
-</section>
-
-<!-- Footer -->
-<footer id="layout-footer">
-    {% partial 'site/footer' %}
-</footer>
-
-<!-- Mobile -->
-{% partial 'site/mobile' %}
-
-<!-- How the page is made -->
-{% partial 'site/how-its-made' %}
+{# scripts partial #}
+{% partial "site/foot" %}
 </body>
 </html>
