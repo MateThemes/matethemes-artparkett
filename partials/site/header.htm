@@ -10,8 +10,8 @@ description = "Header Partial"
                 </a>
             </div>
             <div class="uk-navbar-center">
-                <a href="{{ '/'|app }}" class="uk-navbar-item uk-logo">
-                    <img src="{{ 'assets/images/artparkett-logo.svg'|theme }}" alt="Parkett Stelzl" width="180">
+                <a href="{{ '/'|app }}" class='uk-navbar-item uk-logo'>
+                    <img src="{{ 'assets/images/artparkett-logo.svg'|theme }}" alt="Parkett Stelzl" width="180" data-uk-img>
                 </a>
             </div>
             <div class="uk-navbar-right">
@@ -20,7 +20,7 @@ description = "Header Partial"
                         <a data-uk-icon="icon: world"></a>
                         <div data-uk-dropdown="mode: click">
                             <ul class="uk-nav uk-dropdown-nav">
-                                <li class="uk-active">
+                                <li class='uk-active'>
                                     <a class='lang-item Deutsch' hreflang='de' href='/'>Deutsch</a>
                                 </li>
                                 <li class='no-current'>
@@ -35,7 +35,9 @@ description = "Header Partial"
     </div>
     <div id="tmoffcanvas" data-uk-offcanvas="mode: push; overlay: true">
         <div class="uk-offcanvas-bar uk-flex uk-flex-column uk-text-center">
-            <button class="uk-offcanvas-close uk-close-large" type="button" uk-close data-uk-toggle="cls: uk-close-large; mode: media; media: @s"></button>
+
+            <button class="uk-offcanvas-close uk-close-large" type="button" uk-close uk-toggle="cls: uk-close-large; mode: media; media: @s"></button>
+
             <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical" uk-nav>
                 <li {% if this.page.id == 'home' %}class="uk-active"{% endif %}>
                     <a href="{{ '/'|app }}">Home</a>
@@ -44,14 +46,12 @@ description = "Header Partial"
                     <a href="#">Service <span uk-nav-parent-icon></span></a>
                     <ul class="uk-nav-sub">
                         <li>
-                            <a href="#">Fussboden verlegen vom Fachmann</a>
+                            <a href="#">Fußboden verlegen vom Fachmann</a>
                         </li>
                         <li>
                             <a href="#">Parkett schleifen und renovieren</a>
                         </li>
-                        <li>
-                            <a href="#">Treppenrenovierung</a>
-                        </li>
+                        <li><a href="#">Treppenrenovierung</a></li>
                     </ul>
                 </li>
                 <li>
@@ -64,7 +64,7 @@ description = "Header Partial"
                     <a href="#">Galerie</a>
                 </li>
                 <li>
-                    <a href="#">Kontakt</a>
+                    <a href="{{ 'kontaktieren-sie-uns'|app }}">Kontakt</a>
                 </li>
             </ul>
 
@@ -75,7 +75,6 @@ description = "Header Partial"
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </div>
