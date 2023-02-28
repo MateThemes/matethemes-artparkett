@@ -54,16 +54,19 @@ description = "Header Partial"
                         <li><a href="#">Treppenrenovierung</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="#">Wir über uns</a>
+                <li {% if this.page.id == 'angebote' %}class="uk-active"{% endif %}>
+                    <a href="{{ 'angebote'|app }}">Angebote</a>
                 </li>
-                <li>
-                    <a href="#">Ausstellung München-Forstenried</a>
+                <li {% if this.page.id == 'wir-ueber-uns' %}class="uk-active"{% endif %}>
+                    <a href="{{ 'wir-ueber-uns'|app }}">Wir über uns</a>
                 </li>
-                <li>
-                    <a href="#">Galerie</a>
+                <li {% if this.page.id == 'unsere-ausstellung-muenchen-forstenried' %}class="uk-active"{% endif %}>
+                    <a href="{{ 'unsere-austellung-in-muenchen-forstenried'|app }}">Ausstellung München-Forstenried</a>
                 </li>
-                <li>
+                <li {% if this.page.id == 'galerie' %}class="uk-active"{% endif %}>
+                    <a href="{{ 'galerie'|app }}">Galerie</a>
+                </li>
+                <li {% if this.page.id == 'kontaktieren-sie-uns' %}class="uk-active"{% endif %}>
                     <a href="{{ 'kontaktieren-sie-uns'|app }}">Kontakt</a>
                 </li>
             </ul>
@@ -168,14 +171,17 @@ description = "Header Partial"
                                     </ul>
                                 </div>
                             </li>
-                            <li>
-                                <a href='/wir-ueber-uns/'>Wir über uns</a>
+                            <li {% if this.page.id == 'angebote' %}class="uk-active"{% endif %}>
+                                <a href="{{ 'angebote'|app }}">Angebote</a>
                             </li>
-                            <li>
-                                <a href='/unsere-austellung-in-munchen-forstenried/'>Ausstellung</a>
+                            <li {% if this.page.id == 'wir-ueber-uns' %}class="uk-active"{% endif %}>
+                                <a href="{{ 'wir-ueber-uns'|app }}">Wir über uns</a>
                             </li>
-                            <li>
-                                <a href='/galerie/'>Galerie</a>
+                            <li {% if this.page.id == 'unsere-ausstellung-muenchen-forstenried' %}class="uk-active"{% endif %}>
+                                <a href="{{ 'unsere-ausstellung-in-muenchen-forstenried'|app }}">Ausstellung</a>
+                            </li>
+                            <li {% if this.page.id == 'galerie' %}class="uk-active"{% endif %}>
+                                <a href="{{ 'galerie'|app }}">Galerie</a>
                             </li>
                             <li {% if this.page.id == 'kontaktieren-sie-uns' %}class="uk-active"{% endif %}>
                                 <a href="{{ 'kontaktieren-sie-uns'|app }}">Kontakt</a>

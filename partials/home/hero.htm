@@ -29,22 +29,34 @@ function onStart()
                                 <ul class="uk-slideshow-items">
                                     <li>
                                         <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-center-left">
-                                            <img src="{{ 'assets/images/home/slider-kernesche.jpeg'|theme }}" alt="Charisma Kernesche" width="1920" height="1081" data-uk-cover>
+                                            <picture>
+                                                <source srcset="{{ 'assets/images/home/slider-kernesche.jpeg' | theme | resize(1920, 1081, { mode: 'crop', extension: 'webp' }) }}" type="image/webp">
+                                                <img src="{{ 'assets/images/home/slider-kernesche.jpeg'|theme }}" alt="Charisma Kernesche" width="1920" height="1081" data-uk-cover>
+                                            </picture>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-center-left">
-                                            <img src="{{ 'assets/images/home/slider-450-eiche-lebhaft.jpg'|theme }}" alt="WP 450 Eiche lebhaft" width="1920" height="1081" data-uk-cover>
+                                            <picture>
+                                                <source srcset="{{ 'assets/images/home/slider-450-eiche-lebhaft.jpg' | theme | resize(1920, 1081, { mode: 'crop', extension: 'webp' }) }}" type="image/webp">
+                                                <img src="{{ 'assets/images/home/slider-450-eiche-lebhaft.jpg'|theme }}" alt="WP 450 Eiche lebhaft" width="1920" height="1081" data-uk-cover>
+                                            </picture>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-center-left">
-                                            <img src="{{ 'assets/images/home/slider-einblatt-eiche-auster.jpg'|theme }}" alt="Einblatt Eiche Auster" width="1920" height="1081" data-uk-cover>
+                                            <picture>
+                                                <source srcset="{{ 'assets/images/home/slider-einblatt-eiche-auster.jpg' | theme | resize(1920, 1081, { mode: 'crop', extension: 'webp' }) }}" type="image/webp">
+                                                <img src="{{ 'assets/images/home/slider-einblatt-eiche-auster.jpg'|theme }}" alt="Einblatt Eiche Auster" width="1920" height="1081" data-uk-cover>
+                                            </picture>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-center-left">
-                                            <img src="{{ 'assets/images/home/slider-strip-eiche-savanne.jpg'|theme }}" alt="WP Strip Eiche Savanne" width="1920" height="1081" data-uk-cover>
+                                            <picture>
+                                                <source srcset="{{ 'assets/images/home/slider-strip-eiche-savanne.jpg' | theme | resize(1920, 1081, { mode: 'crop', extension: 'webp' }) }}" type="image/webp">
+                                                <img src="{{ 'assets/images/home/slider-strip-eiche-savanne.jpg'|theme }}" alt="WP Strip Eiche Savanne" width="1920" height="1081" data-uk-cover>
+                                            </picture>
                                         </div>
                                     </li>
                                 </ul>
