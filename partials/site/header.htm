@@ -10,7 +10,7 @@ description = "Header Partial"
                 </a>
             </div>
             <div class="uk-navbar-center">
-                <a href="{{ '/'|app }}" class='uk-navbar-item uk-logo'>
+                <a href="{{ '/'|page }}" class='uk-navbar-item uk-logo'>
                     <img src="{{ 'assets/images/artparkett-logo.svg'|theme }}" alt="Parkett Stelzl" width="180" height="50" data-uk-img>
                 </a>
             </div>
@@ -40,34 +40,34 @@ description = "Header Partial"
 
             <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical" uk-nav>
                 <li {% if this.page.id == 'home' %}class="uk-active"{% endif %}>
-                    <a href="{{ '/'|app }}">Home</a>
+                    <a href="{{ '/'|page }}">Home</a>
                 </li>
                 <li class="uk-parent">
                     <a href="#">Service <span uk-nav-parent-icon></span></a>
                     <ul class="uk-nav-sub">
                         <li>
-                            <a href="#">Fußboden verlegen vom Fachmann</a>
+                            <a href="{{ 'fussboden-verlegen-vom-fachmann'|page }}">Fußboden verlegen vom Fachmann</a>
                         </li>
                         <li>
-                            <a href="#">Parkett schleifen und renovieren</a>
+                            <a href="{{ 'parkett-schleifen-und-renovieren'|page }}">Parkett schleifen und renovieren</a>
                         </li>
-                        <li><a href="#">Treppenrenovierung</a></li>
+                        <li><a href="{{ 'treppenrenovierung'|page }}">Treppenrenovierung</a></li>
                     </ul>
                 </li>
                 <li {% if this.page.id == 'angebote' %}class="uk-active"{% endif %}>
-                    <a href="{{ 'angebote'|app }}">Angebote</a>
+                    <a href="{{ 'angebote'|page }}">Angebote</a>
                 </li>
                 <li {% if this.page.id == 'wir-ueber-uns' %}class="uk-active"{% endif %}>
-                    <a href="{{ 'wir-ueber-uns'|app }}">Wir über uns</a>
+                    <a href="{{ 'wir-ueber-uns'|page }}">Wir über uns</a>
                 </li>
                 <li {% if this.page.id == 'unsere-ausstellung-muenchen-forstenried' %}class="uk-active"{% endif %}>
-                    <a href="{{ 'unsere-austellung-in-muenchen-forstenried'|app }}">Ausstellung München-Forstenried</a>
+                    <a href="{{ 'unsere-austellung-in-muenchen-forstenried'|page }}">Ausstellung München-Forstenried</a>
                 </li>
                 <li {% if this.page.id == 'galerie' %}class="uk-active"{% endif %}>
-                    <a href="{{ 'galerie'|app }}">Galerie</a>
+                    <a href="{{ 'galerie'|page }}">Galerie</a>
                 </li>
                 <li {% if this.page.id == 'kontaktieren-sie-uns' %}class="uk-active"{% endif %}>
-                    <a href="{{ 'kontaktieren-sie-uns'|app }}">Kontakt</a>
+                    <a href="{{ 'kontaktieren-sie-uns'|page }}">Kontakt</a>
                 </li>
             </ul>
 
@@ -85,7 +85,7 @@ description = "Header Partial"
 <div class="tm-header uk-visible@m" data-uk-header>
     <div class="tm-headerbar-default tm-headerbar tm-headerbar-top">
         <div class="uk-container uk-container-large uk-flex uk-flex-middle">
-        <a href="{{ '/'|app }}" class="uk-logo">
+        <a href="{{ '/'|page }}" class="uk-logo">
                 <img src="{{ 'assets/images/artparkett-logo.svg'|theme }}" alt="Parkett Stelzl" width="220" height="61" data-uk-img>
             </a>
             <div class="uk-margin-auto-left">
@@ -153,38 +153,38 @@ description = "Header Partial"
                     <div class="uk-navbar-left uk-flex-auto">
                         <ul class="uk-navbar-nav">
                             <li {% if this.page.id == 'home' %}class="uk-active"{% endif %}>
-                                <a href="{{ '/'|app }}">Home</a>
+                                <a href="{{ '/'|page }}">Home</a>
                             </li>
                             <li>
                                 <a href='#'>Service <span data-uk-navbar-parent-icon></span></a>
                                 <div class='uk-navbar-dropdown'>
                                     <ul class='uk-nav uk-navbar-dropdown-nav'>
                                         <li>
-                                            <a href='/fussboden-verlegen-vom-fachmann/'>Fussboden verlegen vom Fachmann</a>
+                                            <a href="{{ 'fussboden-verlegen-vom-fachmann'|page }}">Fussboden verlegen vom Fachmann</a>
                                         </li>
                                         <li>
-                                            <a href='/parkett-schleifen-und-renovieren/'>Parkett schleifen und renovieren</a>
+                                            <a href="{{ 'parkett-schleifen-und-renovieren'|page }}">Parkett schleifen und renovieren</a>
                                         </li>
                                         <li>
-                                            <a href='/treppenrenovierung/'>Treppenrenovierung</a>
+                                            <a href="{{ 'treppenrenovierung'|page }}">Treppenrenovierung</a>
                                         </li>
                                     </ul>
                                 </div>
                             </li>
                             <li {% if this.page.id == 'angebote' %}class="uk-active"{% endif %}>
-                                <a href="{{ 'angebote'|app }}">Angebote</a>
+                                <a href="{{ 'angebote'|page }}">Angebote</a>
                             </li>
                             <li {% if this.page.id == 'wir-ueber-uns' %}class="uk-active"{% endif %}>
-                                <a href="{{ 'wir-ueber-uns'|app }}">Wir über uns</a>
+                                <a href="{{ 'wir-ueber-uns'|page }}">Wir über uns</a>
                             </li>
                             <li {% if this.page.id == 'unsere-ausstellung-muenchen-forstenried' %}class="uk-active"{% endif %}>
-                                <a href="{{ 'unsere-ausstellung-in-muenchen-forstenried'|app }}">Ausstellung</a>
+                                <a href="{{ 'unsere-ausstellung-in-muenchen-forstenried'|page }}">Ausstellung</a>
                             </li>
                             <li {% if this.page.id == 'galerie' %}class="uk-active"{% endif %}>
-                                <a href="{{ 'galerie'|app }}">Galerie</a>
+                                <a href="{{ 'galerie'|page }}">Galerie</a>
                             </li>
                             <li {% if this.page.id == 'kontaktieren-sie-uns' %}class="uk-active"{% endif %}>
-                                <a href="{{ 'kontaktieren-sie-uns'|app }}">Kontakt</a>
+                                <a href="{{ 'kontaktieren-sie-uns'|page }}">Kontakt</a>
                             </li>
                         </ul>
                         <div class="uk-margin-auto-left uk-navbar-item">
