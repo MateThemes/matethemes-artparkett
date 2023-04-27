@@ -40,7 +40,7 @@ description = "Header Partial"
 
             <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical" uk-nav>
                 <li {% if this.page.id == 'home' %}class="uk-active"{% endif %}>
-                    <a href="{{ '/'|page }}">Home</a>
+                    <a href="{{ 'home'|page }}">Home</a>
                 </li>
                 <li class="uk-parent">
                     <a href="#">Service <span uk-nav-parent-icon></span></a>
@@ -85,7 +85,7 @@ description = "Header Partial"
 <div class="tm-header uk-visible@m" data-uk-header>
     <div class="tm-headerbar-default tm-headerbar tm-headerbar-top">
         <div class="uk-container uk-container-large uk-flex uk-flex-middle">
-        <a href="{{ '/'|page }}" class="uk-logo">
+        <a href="{{ 'home'|page }}" class="uk-logo">
                 <img src="{{ 'assets/images/artparkett-logo.svg'|theme }}" alt="Parkett Stelzl" width="220" height="61" data-uk-img>
             </a>
             <div class="uk-margin-auto-left">
@@ -153,7 +153,7 @@ description = "Header Partial"
                     <div class="uk-navbar-left uk-flex-auto">
                         <ul class="uk-navbar-nav">
                             <li {% if this.page.id == 'home' %}class="uk-active"{% endif %}>
-                                <a href="{{ '/'|page }}">Home</a>
+                                <a href="{{ 'home'|page }}">Home</a>
                             </li>
                             <li>
                                 <a href='#'>Service <span data-uk-navbar-parent-icon></span></a>
