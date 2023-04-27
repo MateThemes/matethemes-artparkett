@@ -1,0 +1,26 @@
+description = "Error layout"
+==
+<!DOCTYPE html>
+<html lang="de-DE">
+<head>
+    {% partial "site/head" %}
+</head>
+<body>
+{# Page loading spinner #}
+<div class="page-loading active">
+    <div class="page-loading-inner">
+        <div class="page-spinner"></div>
+        <span>Lade ...</span>
+    </div>
+</div>
+{# header partial #}
+{% partial "site/header" %}
+{% page %}
+
+{# footer partial #}
+{% partial "site/footer" %}
+
+{# scripts partial #}
+{% partial "site/foot" %}
+</body>
+</html>
