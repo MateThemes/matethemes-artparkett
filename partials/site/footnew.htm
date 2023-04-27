@@ -1,0 +1,11 @@
+description = "Scripts Partial (new)"
+==
+{# Vendor scripts: js libraries and plugins #}
+<script src="{{ [
+    '@framework.extras',
+    'assets/newassets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js',
+    'assets/newassets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js',
+    'assets/newassets/js/theme.min.js'
+]|theme }}"></script>
+
+{% scripts %}
