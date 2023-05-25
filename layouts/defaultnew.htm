@@ -1,0 +1,26 @@
+description = "Default layout - new with Bootstrap 5"
+==
+<!DOCTYPE html>
+<html lang="de-DE">
+<head>
+    {% partial "site/headnew" %}
+</head>
+<body>
+{# Page loading spinner #}
+<div class="page-loading active">
+    <div class="page-loading-inner">
+        <div class="page-spinner"></div>
+        <span>Lade ...</span>
+    </div>
+</div>
+{# header partial #}
+{% partial "site/header" %}
+{% page %}
+
+{# footer partial #}
+{% partial "site/footer" %}
+
+{# scripts partial #}
+{% partial "site/footnew" %}
+</body>
+</html>
