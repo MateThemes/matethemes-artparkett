@@ -4810,9 +4810,9 @@ type-is@~1.6.18:
     mime-types "~2.1.24"
 
 uikit@^3.15.17:
-  version "3.16.3"
-  resolved "https://registry.yarnpkg.com/uikit/-/uikit-3.16.3.tgz#4c7648f1159f4de6e479b1b3cfbd556912f5602c"
-  integrity sha512-jTPbyZbzlh7qlPNJoILd4/Tqe4kl8iCMKrVCZubBTp0ZTElgFWcSQgquH6Un+NqRNUxFmzIih1cWXdpASsB75A==
+  version "3.16.19"
+  resolved "https://registry.yarnpkg.com/uikit/-/uikit-3.16.19.tgz#2b1120f32807d5a3fe92837f6a032cf5a46e1bca"
+  integrity sha512-o3q00RX95tpPJrmfghdPJ9xC5FMgLABaqCw2iGXBK55ovqkvtRx4/1FycfaTQuB6Y26RAN/kFpWSEigcBIa3kg==
 
 unicode-canonical-property-names-ecmascript@^2.0.0:
   version "2.0.0"

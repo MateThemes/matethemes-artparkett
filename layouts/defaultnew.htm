@@ -8,17 +8,25 @@ description = "Default layout - new with Bootstrap 5"
 <body>
 {# Page loading spinner #}
 <div class="page-loading active">
-    <div class="page-loading-inner">
-        <div class="page-spinner"></div>
-        <span>Lade ...</span>
-    </div>
+  <div class="page-loading-inner">
+    <div class="page-spinner"></div><span>Lade ...</span>
+  </div>
 </div>
+<main class="page-wrapper">
 {# header partial #}
 {% partial "site/header" %}
 {% page %}
+</main>
 
 {# footer partial #}
 {% partial "site/footer" %}
+
+<!-- Back to top button-->
+<a class="btn-scroll-top" href="#top" data-scroll>
+  <svg viewBox="0 0 40 40" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"></circle>
+  </svg><i class="ai-arrow-up"></i>
+</a>
 
 {# scripts partial #}
 {% partial "site/footnew" %}
