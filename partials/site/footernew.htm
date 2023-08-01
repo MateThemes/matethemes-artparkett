@@ -1,4 +1,7 @@
 description = "Footer new partial"
+
+[global settings]
+handle = "Content\Settings"
 ==
 <footer>
     <div class="uk-section-default uk-section uk-section-large">
@@ -48,7 +51,7 @@ description = "Footer new partial"
         <div class="uk-container uk-container-xlarge">
             <div class="uk-grid tm-grid-expand uk-grid-margin" data-uk-grid>
                 <div class="uk-width-1-4@m">
-                    <div class="uk-h5 uk-margin-remove-vertical uk-text-left@m uk-text-center">Parkett Stelzl</div>
+                    <div class="uk-h5 uk-margin-remove-vertical uk-text-left@m uk-text-center">{{ settings.website_name }}</div>
                     <div class="uk-divider-small uk-margin-small uk-width-small uk-visible@m"></div>
                 </div>
                 <div class="uk-width-1-2@m">
