@@ -12,7 +12,7 @@ handle = "Content\Settings"
                     <div id="builderwidget-2#4" class="uk-margin-medium uk-text-left@m uk-text-center">
                         <form class="uk-form uk-panel js-form-newsletter" method="post" action="https://demo.yootheme.com/wordpress/themes/district/wp-admin/admin-ajax.php?action=kernel&amp;p=theme%2Fnewsletter%2Fsubscribe&amp;hash=55dc9f0b">
                             <div class="uk-position-relative">
-                                <button class="el-button uk-form-icon uk-form-icon-flip" uk-icon="icon: arrow-right;" title="Subscribe"></button> <input class="el-input uk-input" type="email" name="email" placeholder="Email Address" aria-label="Email Address" required>
+                                <button class="el-button uk-form-icon uk-form-icon-flip" uk-icon="icon: arrow-right;" title="Subscribe"></button> <input class="el-input uk-input" type="email" name="email" placeholder="E-Mail-Adresse" aria-label="Email Address" required>
                             </div>
                             <input type="hidden" name="settings" value="eyJuYW1lIjoibWFpbGNoaW1wIiwiYWZ0ZXJfc3VibWl0IjoibWVzc2FnZSIsIm1lc3NhZ2UiOiJZb3UndmUgYmVlbiBzdWJzY3JpYmVkIHN1Y2Nlc3NmdWxseS4iLCJyZWRpcmVjdCI6IiIsImNsaWVudF9pZCI6IiIsImxpc3RfaWQiOiIiLCJkb3VibGVfb3B0aW4iOnRydWV9">
                             <div class="message uk-margin uk-hidden"></div>
@@ -26,16 +26,27 @@ handle = "Content\Settings"
                             <div>
                                 <div class="el-item uk-panel uk-margin-remove-first-child">
                                     <h3 class="el-title uk-h4 uk-margin-top uk-margin-remove-bottom">Ausstellung</h3>
-                                    <div class="el-content uk-panel uk-margin-top">{{ settings.address_office }}, {{ settings.city_office }}</div>
-                                    <div class="el-content uk-panel">Rormford Street 16</div>
+                                    <div class="el-content uk-panel uk-margin-top">{{ settings.address_showroom }}, {{ settings.city_showroom }}</div>
+                                    {% if settings.phone_showroom %}<div class="el-content uk-panel">Tel.: {{ settings.phone_showroom }}</div>{% endif %}
+                                    {% if settings.fax_showroom %}<div class="el-content uk-panel">Fax.: {{ settings.fax_showroom }}</div>{% endif %}
+
+                                    <h3 class="el-title uk-h5 uk-margin-top uk-margin-remove-bottom">Öffnungszeiten</h3>
+                                    <div class="el-content uk-panel uk-margin-top">
+                                        <ul class="uk-list uk-list-collapse">
+                                            <li>Mo. - Fr.: 8-00 - 12:00 Uhr</li>
+                                            <li>Mo. - Do.: 13:00 - 17:00 Uhr</li>
+                                        </ul>
+                                        <p class="uk-text-bold">Freitag nachmittag und Samstag geschlossen. An gesetzlichen Feiertagen geschlossen.</p>
+                                    </div>
                                 </div>
                             </div>
                             <div>
                                 <div class="el-item uk-panel uk-margin-remove-first-child">
                                     <h3 class="el-title uk-h4 uk-margin-top uk-margin-remove-bottom">Büro</h3>
                                     <div class="el-content uk-panel uk-margin-top">{{ settings.address_office }}, {{ settings.city_office }}</div>
-                                    <div class="el-content uk-panel">Tel: {{ settings.phone_office }}</div>
-                                    <div class="el-content uk-panel">Fax: {{ settings.fax_office }}</div>
+                                    {% if settings.phone_office %}<div class="el-content uk-panel">Tel: {{ settings.phone_office }}</div>{% endif %}
+                                    {% if settings.fax_office %}<div class="el-content uk-panel">Fax: {{ settings.fax_office }}</div>{% endif %}
+
                                     <h3 class="el-title uk-h5 uk-margin-top uk-margin-remove-bottom">Öffnungszeiten</h3>
                                     <div class="el-content uk-panel uk-margin-top">
                                         <ul class="uk-list uk-list-collapse">
