@@ -40,7 +40,7 @@ handle = "Content\Settings"
                                             <li>Mo. - Do.: 13:00 - 17:00 Uhr</li>
                                         </ul>
                                         {# important informations showroom #}
-                                        {% if settings.info_showroom %}<p class="uk-text-bold">{{ settings.info_showroom }}</p>{% endif %}
+                                        {% if settings.info_showroom %}<p class="uk-text-bold">{{ settings.info_showroom|raw }}</p>{% endif %}
                                     </div>
                                 </div>
                             </div>
@@ -78,7 +78,7 @@ handle = "Content\Settings"
                     <div class="uk-text-center">
                         <ul class="uk-margin-remove-bottom uk-subnav  uk-subnav-divider uk-flex-center" uk-margin>
                             <li class="el-item ">
-                                <a class="el-link" href="https://demo.yootheme.com/wordpress/themes/district/?page_id=3">Impressum</a>
+                                <a class="el-link" href="https://artparkett-stelzl.de/impressum">Impressum</a>
                             </li>
                             <li class="el-item ">
                                 <a class="el-link" href="https://demo.yootheme.com/wordpress/themes/district/?page_id=5">AGB</a>
@@ -91,7 +91,7 @@ handle = "Content\Settings"
                             </li>
                         </ul>
                     </div>
-                    <div class="uk-panel uk-text-small uk-text-muted uk-margin uk-text-center@m uk-text-center">© {{ 'now' | date('Y') }} Parkett Stelzl. Alle Rechte vorbehalten. Created by <a class="uk-link-text" href="https://mate-themes.com/">MateThemes</a>.</div>
+                    <div class="uk-panel uk-text-small uk-text-muted uk-margin uk-text-center@m uk-text-center">© {{ 'now' | date('Y') }} Parkett Stelzl. Alle Rechte vorbehalten. Created by <a class="uk-link-text" href="https://mate-themes.com/" target="_blank" rel="noopener">MateThemes</a>.</div>
                 </div>
                 <div class="uk-width-1-4@m">
                     <div class="uk-flex uk-flex-center uk-flex-right@m uk-margin-remove-vertical">
@@ -103,7 +103,7 @@ handle = "Content\Settings"
                             </div>
                             <div>
                                 <div class="el-item uk-panel uk-margin-remove-first-child">
-                                    <a href="https://facebook.com/artparkettstelzl" target="_blank" rel="nooopener">
+                                    <a href="{{ settings.facebook_url }}" target="_blank" rel="nooopener">
                                         <span class="el-image uk-text-emphasis" uk-icon="icon: facebook; width: 20; height: 20;"></span>
                                     </a>
                                 </div>
