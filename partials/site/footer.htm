@@ -26,17 +26,21 @@ handle = "Content\Settings"
                             <div>
                                 <div class="el-item uk-panel uk-margin-remove-first-child">
                                     <h3 class="el-title uk-h4 uk-margin-top uk-margin-remove-bottom">Ausstellung</h3>
+
+                                    {# contact showroom #}
                                     <div class="el-content uk-panel uk-margin-top">{{ settings.address_showroom }}, {{ settings.city_showroom }}</div>
                                     {% if settings.phone_showroom %}<div class="el-content uk-panel">Tel.: {{ settings.phone_showroom }}</div>{% endif %}
                                     {% if settings.fax_showroom %}<div class="el-content uk-panel">Fax.: {{ settings.fax_showroom }}</div>{% endif %}
 
+                                    {# opening hours showroom #}
                                     <h3 class="el-title uk-h5 uk-margin-top uk-margin-remove-bottom">Öffnungszeiten</h3>
                                     <div class="el-content uk-panel uk-margin-top">
                                         <ul class="uk-list uk-list-collapse">
                                             <li>Mo. - Fr.: 8-00 - 12:00 Uhr</li>
                                             <li>Mo. - Do.: 13:00 - 17:00 Uhr</li>
                                         </ul>
-                                        <p class="uk-text-bold">Freitag nachmittag und Samstag geschlossen. An gesetzlichen Feiertagen geschlossen.</p>
+                                        {# important informations showroom #}
+                                        {% if settings.info_showroom %}<p class="uk-text-bold">{{ settings.info_showroom }}</p>{% endif %}
                                     </div>
                                 </div>
                             </div>
