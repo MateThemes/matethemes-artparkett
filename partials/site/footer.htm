@@ -28,7 +28,7 @@ handle = "Content\Settings"
                                     <h3 class="el-title uk-h4 uk-margin-top uk-margin-remove-bottom">Ausstellung</h3>
 
                                     {# contact showroom #}
-                                    <div class="el-content uk-panel uk-margin-top">{{ settings.address_showroom }}, {{ settings.city_showroom }}</div>
+                                    <div class="el-content uk-panel uk-margin-top">{{ settings.street_showroom }}, {{ settings.plz_showroom }} {{ settings.town_showroom }}</div>
                                     {% if settings.phone_showroom %}<div class="el-content uk-panel">Tel.: {{ settings.phone_showroom }}</div>{% endif %}
                                     {% if settings.fax_showroom %}<div class="el-content uk-panel">Fax.: {{ settings.fax_showroom }}</div>{% endif %}
 
@@ -38,7 +38,7 @@ handle = "Content\Settings"
                                         {% if settings.openinghours_showroom %}
                                         <ul class="uk-list uk-list-collapse">
                                             {% for settings in settings.openinghours_showroom %}
-                                            <li>{{ settings.day_showroom }} {{ settings.time_showroom }}</li>
+                                            <li>{{ settings.day_showroom }} {{ settings.hours_showroom }}</li>
                                             {% endfor %}
                                         </ul>
                                         {% else %}
@@ -46,14 +46,14 @@ handle = "Content\Settings"
                                         {% endif %}
 
                                         {# important informations showroom #}
-                                        {% if settings.info_showroom %}{{ settings.info_showroom|raw }}{% endif %}
+                                        {% if settings.notice_showroom %}{{ settings.notice_showroom|raw }}{% endif %}
                                     </div>
                                 </div>
                             </div>
                             <div>
                                 <div class="el-item uk-panel uk-margin-remove-first-child">
                                     <h3 class="el-title uk-h4 uk-margin-top uk-margin-remove-bottom">Büro</h3>
-                                    <div class="el-content uk-panel uk-margin-top">{{ settings.address_office }}, {{ settings.city_office }}</div>
+                                    <div class="el-content uk-panel uk-margin-top">{{ settings.street_office }}, {{ settings.plz_office }} {{ settings.town_office }}</div>
                                     {% if settings.phone_office %}<div class="el-content uk-panel">Tel: {{ settings.phone_office }}</div>{% endif %}
                                     {% if settings.fax_office %}<div class="el-content uk-panel">Fax: {{ settings.fax_office }}</div>{% endif %}
 
@@ -62,7 +62,7 @@ handle = "Content\Settings"
                                         {% if settings.openinghours_office %}
                                         <ul class="uk-list uk-list-collapse">
                                             {% for settings in settings.openinghours_office %}
-                                            <li>{{ settings.day_office }} {{ settings.time_office}}</li>
+                                            <li>{{ settings.day_office }} {{ settings.hours_office}}</li>
                                             {% endfor %}
                                         </ul>
                                         {% else %}
@@ -70,7 +70,7 @@ handle = "Content\Settings"
                                         {% endif %}
 
                                         {# important informations office #}
-                                        {% if settings.info_office %}{{ settings.info_office|raw }}{% endif %}
+                                        {% if settings.notice_office %}{{ settings.notice_office|raw }}{% endif %}
                                     </div>
                                 </div>
                             </div>
