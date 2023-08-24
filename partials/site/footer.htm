@@ -35,12 +35,18 @@ handle = "Content\Settings"
                                     {# opening hours showroom #}
                                     <h3 class="el-title uk-h5 uk-margin-top uk-margin-remove-bottom">Öffnungszeiten</h3>
                                     <div class="el-content uk-panel uk-margin-top">
+                                        {% if settings.openinghours_showroom %}
                                         <ul class="uk-list uk-list-collapse">
-                                            <li>Mo. - Fr.: 8-00 - 12:00 Uhr</li>
-                                            <li>Mo. - Do.: 13:00 - 17:00 Uhr</li>
+                                            {% for settings in settings.openinghours_showroom %}
+                                            <li>{{ settings.day_showroom }} {{ settings.time_showroom }}</li>
+                                            {% endfor %}
                                         </ul>
+                                        {% else %}
+                                        <p>Keine Daten verfügbar</p>
+                                        {% endif %}
+
                                         {# important informations showroom #}
-                                        {% if settings.info_showroom %}<p class="uk-text-bold">{{ settings.info_showroom|raw }}</p>{% endif %}
+                                        {% if settings.info_showroom %}{{ settings.info_showroom|raw }}{% endif %}
                                     </div>
                                 </div>
                             </div>
@@ -53,11 +59,18 @@ handle = "Content\Settings"
 
                                     <h3 class="el-title uk-h5 uk-margin-top uk-margin-remove-bottom">Öffnungszeiten</h3>
                                     <div class="el-content uk-panel uk-margin-top">
+                                        {% if settings.openinghours_office %}
                                         <ul class="uk-list uk-list-collapse">
-                                            <li>Mo. - Fr.: 8-00 - 12:00 Uhr</li>
-                                            <li>Mo. - Do.: 13:00 - 17:00 Uhr</li>
+                                            {% for settings in settings.openinghours_office %}
+                                            <li>{{ settings.day_office }} {{ settings.time_office}}</li>
+                                            {% endfor %}
                                         </ul>
-                                        <p class="uk-text-bold">Freitag nachmittag und Samstag geschlossen. An gesetzlichen Feiertagen geschlossen.</p>
+                                        {% else %}
+                                        <p>Keine Daten eingegeben.</p>
+                                        {% endif %}
+
+                                        {# important informations office #}
+                                        {% if settings.info_office %}{{ settings.info_office|raw }}{% endif %}
                                     </div>
                                 </div>
                             </div>
