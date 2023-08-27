@@ -45,13 +45,15 @@ description = "Header Partial"
                 <li class="uk-parent">
                     <a href="#">Service <span uk-nav-parent-icon></span></a>
                     <ul class="uk-nav-sub">
-                        <li>
+                        <li {% if this.page.id == 'fussboden-verlegen-vom-fachmann' %}class="uk-active"{% endif %}>
                             <a href="{{ 'fussboden-verlegen-vom-fachmann'|page }}">Fußboden verlegen vom Fachmann</a>
                         </li>
-                        <li>
+                        <li {% if this.page.id == 'parkett-schleifen-und-renovieren' %}class="uk-active"{% endif %}>
                             <a href="{{ 'parkett-schleifen-und-renovieren'|page }}">Parkett schleifen und renovieren</a>
                         </li>
-                        <li><a href="{{ 'treppenrenovierung'|page }}">Treppenrenovierung</a></li>
+                        <li {% if this.page.id == 'treppenrenovierung' %}class="uk-active"{% endif %}>
+                            <a href="{{ 'treppenrenovierung'|page }}">Treppenrenovierung</a>
+                        </li>
                     </ul>
                 </li>
                 <li {% if this.page.id == 'angebote' %}class="uk-active"{% endif %}>
